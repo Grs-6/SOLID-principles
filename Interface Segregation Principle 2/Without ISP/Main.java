@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         // Network Developer
-        INetworkDriver networkDeveloper = new Developer1();
-        networkDeveloper.sendData("Hello, World!");
-        networkDeveloper.receiveData();
+        DeviceDriver networkDeveloper = new NetworkDeveloper();
+        networkDeveloper.sendData("Hello, World!");  // Sends data
+        networkDeveloper.receiveData();              // Receives data
         
         // Health Monitor
-        IDeviceHealthDriver healthMonitor = new Developer2();
-        healthMonitor.checkDeviceHealth();
+        DeviceDriver healthMonitor = new HealthMonitor();
+        healthMonitor.checkDeviceHealth();  // Checks the health of the device
         
         // Configuration Developer
-        IConfigurationDriver configDeveloper = new Developer3();
-        configDeveloper.setIPAddress("192.168.1.1");
+        DeviceDriver configDeveloper = new ConfigurationDeveloper();
+        configDeveloper.setIPAddress("192.168.1.1");  // Sets the device IP address
     }
 }
